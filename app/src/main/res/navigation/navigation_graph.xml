@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/selectFragment">
+
+  <fragment
+      android:id="@+id/selectFragment"
+      android:name="ru.otus.rv.SelectFragment"
+      android:label="SelectFragment" >
+    <action
+        android:id="@+id/action_selectFragment_to_StartSimpleFragment"
+        app:destination="@id/StartSimpleFragment" />
+    <action
+        android:id="@+id/action_selectFragment_to_StartMultiTypeFragment"
+        app:destination="@id/StartMultiTypeFragment" />
+    <action
+        android:id="@+id/action_selectFragment_to_StartGridFragment"
+        app:destination="@id/StartGridFragment" />
+    <action
+        android:id="@+id/action_selectFragment_to_StartDUListFragment"
+        app:destination="@id/StartDUListFragment" />
+
+    <action
+        android:id="@+id/action_selectFragment_to_FinishSimpleFragment"
+        app:destination="@id/FinishSimpleFragment" />
+    <action
+        android:id="@+id/action_selectFragment_to_FinishMultiTypeFragment"
+        app:destination="@id/FinishMultiTypeFragment" />
+    <action
+        android:id="@+id/action_selectFragment_to_FinishGridFragment"
+        app:destination="@id/FinishGridFragment" />
+    <action
+        android:id="@+id/action_selectFragment_to_FinishDUListFragment"
+        app:destination="@id/FinishDUListFragment" />
+  </fragment>
+
+  <fragment
+      android:id="@+id/StartSimpleFragment"
+      android:name="ru.otus.rv.presentation.start.simple.SimpleFragment"
+      android:label="SimpleFragment" />
+
+  <fragment
+      android:id="@+id/StartMultiTypeFragment"
+      android:name="ru.otus.rv.presentation.start.multitypes.MultiTypeFragment"
+      android:label="MultiTypeFragment" />
+
+  <fragment
+      android:id="@+id/StartGridFragment"
+      android:name="ru.otus.rv.presentation.start.grid.GridFragment"
+      android:label="GridFragment" />
+
+  <fragment
+      android:id="@+id/StartDUListFragment"
+      android:name="ru.otus.rv.presentation.start.dulist.DUListFragment"
+      android:label="DUListFragment" />
+
+  <fragment
+      android:id="@+id/FinishSimpleFragment"
+      android:name="ru.otus.rv.presentation.finish.simple.SimpleFragment"
+      android:label="SimpleFragment" />
+
+  <fragment
+      android:id="@+id/FinishMultiTypeFragment"
+      android:name="ru.otus.rv.presentation.finish.multitypes.MultiTypeFragment"
+      android:label="MultiTypeFragment" />
+
+  <fragment
+      android:id="@+id/FinishGridFragment"
+      android:name="ru.otus.rv.presentation.finish.grid.GridFragment"
+      android:label="GridFragment" />
+
+  <fragment
+      android:id="@+id/FinishDUListFragment"
+      android:name="ru.otus.rv.presentation.finish.dulist.DUListFragment"
+      android:label="DUListFragment" />
+
+</navigation>

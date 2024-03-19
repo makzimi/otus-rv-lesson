@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="16dp"
+    >
+
+  <TextView
+      android:id="@+id/start_label"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toTopOf="@+id/start_simple"
+      android:text="Start:"
+      android:textSize="22sp"
+      android:layout_marginBottom="10dp"
+      />
+
+  <Button
+      android:id="@+id/start_simple"
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:text="Simple List"
+      app:layout_constraintBottom_toTopOf="@+id/start_multitype"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/start_label"
+      />
+
+  <Button
+      android:id="@+id/start_multitype"
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:text="Multi Type List"
+      app:layout_constraintBottom_toTopOf="@+id/start_grid"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/start_simple"
+      />
+
+  <Button
+      android:id="@+id/start_grid"
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:text="Grid"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintBottom_toTopOf="@+id/start_list_adapter"
+      app:layout_constraintTop_toBottomOf="@id/start_multitype"
+      />
+
+  <Button
+      android:id="@+id/start_list_adapter"
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:text="List Adapter"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/start_grid"
+      app:layout_constraintBottom_toTopOf="@+id/finish_label"
+      />
+
+  <TextView
+      android:id="@+id/finish_label"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/start_list_adapter"
+      app:layout_constraintBottom_toTopOf="@+id/finish_simple"
+      android:text="Finish:"
+      android:textSize="22sp"
+      android:layout_marginBottom="10dp"
+      android:layout_marginTop="20dp"
+      />
+
+  <Button
+      android:id="@+id/finish_simple"
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:text="Simple List"
+      app:layout_constraintBottom_toTopOf="@+id/finish_multitype"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/finish_label"
+      />
+
+  <Button
+      android:id="@+id/finish_multitype"
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:text="Multi Type List"
+      app:layout_constraintBottom_toTopOf="@+id/finish_grid"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/finish_simple"
+      />
+
+  <Button
+      android:id="@+id/finish_grid"
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:text="Grid"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintBottom_toTopOf="@+id/finish_list_adapter"
+      app:layout_constraintTop_toBottomOf="@id/finish_multitype"
+      />
+
+  <Button
+      android:id="@+id/finish_list_adapter"
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:text="List Adapter"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/finish_grid"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
