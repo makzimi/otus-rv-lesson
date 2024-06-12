@@ -32,7 +32,6 @@ class GridFragment : Fragment() {
         val adapter = GridAdapter()
         binding.recyclerView.adapter = adapter
 
-        binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         adapter.items = GridFactory.create()
