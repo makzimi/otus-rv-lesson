@@ -29,6 +29,8 @@ class SeparatorDecorator(private val separatorHeightDp: Int) : RecyclerView.Item
         outRect.bottom = separatorHeightDp
     }
 
+    private val bounds = Rect()
+
     override fun onDrawOver(canvas: Canvas, parent: RecyclerView, state: RecyclerView.State) {
         super.onDrawOver(canvas, parent, state)
 
@@ -36,11 +38,14 @@ class SeparatorDecorator(private val separatorHeightDp: Int) : RecyclerView.Item
         for (i in 0 until parent.childCount) {
             val child = parent.getChildAt(i)
 
+            parent.getDecoratedBoundsWithMargins(child, bounds)
+            val bottom: Int = bounds.bottom + Math.round(child.translationY)
+
             canvas.drawRect(
                 layoutManager.getDecoratedLeft(child).toFloat(),
-                layoutManager.getDecoratedBottom(child).toFloat() - separatorHeightDp,
+                (bottom - separatorHeightDp).toFloat(),
                 layoutManager.getDecoratedRight(child).toFloat(),
-                layoutManager.getDecoratedBottom(child).toFloat(),
+                bottom.toFloat(),
                 paint,
             )
         }
